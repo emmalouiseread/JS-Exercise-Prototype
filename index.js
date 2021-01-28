@@ -44,11 +44,10 @@ function Airplane(name) {
     this.age = age;
     this.stomach = [];
   }
-  Person.prototype.eat = function(edible) {
+  Person.prototype.eat = function(food) {
     if (this.stomach.length < 10) {
-      this.stomach.push(edible);
+      this.stomach.push(food);
   }
-  console.log(edible);
 }
   Person.prototype.poop = function() {
     this.stomach = [];
@@ -56,6 +55,7 @@ function Airplane(name) {
   Person.prototype.toString = function(name, age) {
     return `${this.name}, ${this.age}`;
   }
+  console.log(food);
  
  
 
@@ -117,7 +117,7 @@ function Airplane(name) {
     1. Window Binding. If none of the other rules apply 'this' defaults to the window - unless you are in strict mode in which case it will return undefined. We do not want to use window binding.
     2. Implicit Binding is the most common rule - used in about 80% of use cases. When the function is invoked, look to the left of the dot, that's what 'this' referes to. It exists within a method.
     3. Explicit binding means invoking the function - look to the left of the dot in the invocation. .call will immediately invoke the function
-    4. 
+    4. New binding happens when we use a constructor function and this refers to the instance of an object that is created and returned by a constructor function
   */
   
   
